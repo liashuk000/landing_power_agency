@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="./css/style.css" />
+		<title>Custom checkboxes and Radio Buttons</title>
+	</head>
+	<body>
+		<h3>Checkboxes</h3>
+		<fieldset>
+			<legend>Choose your monster's features:</legend>
+
+			<div class="custom_check custom_check--1">
+				<input class="custom_check__input" type="checkbox" id="lorem_check" name="lorem" value="lorem" checked />
+				<label class="custom_check__label" for="lorem_check"
+					>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero soluta perspiciatis veniam minima,
+					deserunt, animi eos atque laboriosam minus recusandae accusantium dolorum praesentium cupiditate.
+					Earum, ratione? In quisquam rem explicabo!</label
+				>
+			</div>
+
+			<div class="custom_check custom_check--2">
+				<input class="custom_check__input" type="checkbox" id="scales" name="scales" checked />
+				<label class="custom_check__label" for="scales">Scales</label>
+			</div>
+
+			<div class="custom_check custom_check--3">
+				<input class="custom_check__input" type="checkbox" id="horns" name="horns" />
+				<label class="custom_check__label" for="horns">Horns</label>
+			</div>
+		</fieldset>
+		<h3>Radio Buttons</h3>
+		<fieldset>
+			<legend>Select a maintenance drone:</legend>
+
+			<div class="custom_radio custom_radio--1">
+				<input class="custom_radio__input" type="radio" id="lorem_radio" name="drone" value="lorem" checked />
+				<label class="custom_radio__label" for="lorem_radio"
+					>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero soluta perspiciatis veniam minima,
+					deserunt, animi eos atque laboriosam minus recusandae accusantium dolorum praesentium cupiditate.
+					Earum, ratione? In quisquam rem explicabo!</label
+				>
+			</div>
+			<div class="custom_radio custom_radio--2">
+				<input class="custom_radio__input" type="radio" id="huey" name="drone" value="huey" />
+				<label class="custom_radio__label" for="huey">Huey</label>
+			</div>
+
+			<div class="custom_radio custom_radio--3">
+				<input class="custom_radio__input" type="radio" id="dewey" name="drone" value="dewey" />
+				<label class="custom_radio__label" for="dewey">Dewey</label>
+			</div>
+
+			<div class="custom_radio custom_radio--4">
+				<input class="custom_radio__input" type="radio" id="louie" name="drone" value="louie" />
+				<label class="custom_radio__label" for="louie">Louie</label>
+			</div>
+			<div class="custom_radio custom_radio--5">
+				<input class="custom_radio__input" type="radio" id="louie" name="drone" value="louie" disabled />
+				<label class="custom_radio__label" for="louie">Disabled</label>
+			</div>
+		</fieldset>
+	</body>
+</html>
