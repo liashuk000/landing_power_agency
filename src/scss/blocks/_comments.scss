@@ -1,0 +1,47 @@
+@use './helpers/abstracts' as *;
+
+.comments {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.comments_nav {
+    display: flex;
+    justify-content: center;
+    margin-top: 7rem;
+}
+
+.comments_title {
+	margin-bottom: 11rem;
+}
+
+.comments__item {
+    display: block;
+    max-width: 67rem;
+    width: 100%;
+}
+
+.comments__item_text {
+	font-size: 1.6rem;
+	font-weight: 400;
+	line-height: 1.5;
+	text-align: center;
+    color: $color_text_2;
+}
+
+
+//nav
+
+.comments_nav__img_w {
+    height: 8.6rem;
+    width: 8.6rem;
+
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.comments_nav__img {
+    @extend %cover_img
+}
