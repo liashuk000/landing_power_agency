@@ -1,0 +1,28 @@
+.tabs_block{
+	max-width: 500px;
+	row-gap: 20px;
+	display: flex;
+	flex-direction: column;
+}
+
+.tabs_nav__list {
+	display: flex;
+	column-gap: 20px;
+}
+
+.tabs_content__item {
+	display: none;
+}
+
+.tabs_content__item.active {
+	display: block;
+}
+
+.tabs_content__item:nth-child(2) {
+	background-color: blue;
+}
+.tabs_content__item:nth-child(3) {
+	background-color: green;
+}
+
+

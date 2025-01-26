@@ -1,0 +1,16 @@
+@mixin bp($width, $direction: max) {
+	@if $direction == min {
+		@media screen and (min-width: $width) {
+		// @media screen and (width >= $width) {
+			@content;
+		}
+	} @else {
+		@media screen and (max-width: $width) {
+		// @media screen and (width <= $width) {
+			@content;
+		}
+	}
+}
+
+// @include bp($point_1, min)
+// @include bp($point_2)

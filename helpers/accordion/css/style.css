@@ -1,0 +1,31 @@
+.accordion__list {
+	display: flex;
+	flex-direction: column;
+	row-gap: 10px;
+	max-width: 400px;
+	width: 100%;
+}
+
+.accordion__title {
+	padding: 0 20px;
+	height: 30px;
+	line-height: 30px;
+	background-color: rgb(176, 216, 218);
+
+	cursor: pointer;
+}
+
+.accordion__content {
+	opacity: 0;
+	visibility: hidden;
+	pointer-events: none;
+	height: 0;
+}
+
+.accordion__title.active + .accordion__content {
+	opacity: 1;
+	visibility: visible;
+	pointer-events: auto;
+	height: auto;
+	transition: all 0.3s ease-in-out;
+}

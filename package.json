@@ -1,0 +1,29 @@
+{
+	"name": "eveligora_gulp_5_template",
+	"version": "1.0.0",
+	"author": "Evgeniy Veligora",
+	"license": "ISC",
+	"description": "Simple Gulp 5 start template",
+	"main": "gulpfile.js",
+	"scripts": {
+		"start": "gulp",
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"config": {
+		"srcDir": "./src/",
+		"outputDir": "./app/",
+		"buildDir": "./build/"
+	},
+	"devDependencies": {
+		"browser-sync": "^3.0.2",
+		"gulp": "^5.0.0",
+		"gulp-autoprefixer": "^8.0.0",
+		"gulp-changed": "^5.0.2",
+		"gulp-concat": "^2.6.1",
+		"gulp-csso": "^4.0.1",
+		"gulp-dart-sass": "^1.1.0",
+		"gulp-file-include": "^2.3.0",
+		"gulp-prettier": "^6.0.0",
+		"gulp-terser": "^2.1.0"
+	}
+}

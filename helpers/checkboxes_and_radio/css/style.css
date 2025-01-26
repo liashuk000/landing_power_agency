@@ -1,0 +1,80 @@
+/* input {
+	accent-color: tomato;
+} */
+
+/* .custom_check {
+	accent-color: green;
+} */
+
+fieldset {
+	display: flex;
+	flex-direction: column;
+	row-gap: 10px;
+}
+
+/* checkboxes */
+.custom_check {
+	position: relative;
+}
+
+.custom_check__input {
+	position: absolute;
+	top: 0;
+	left: 0;
+	opacity: 0;
+}
+
+.custom_check__label::before {
+	display: inline-flex;
+	width: 14px;
+	height: 14px;
+	content: "";
+	border: 1px solid #111;
+	border-radius: 4px;
+	margin-right: 8px;
+}
+
+.custom_check__input:disabled + .custom_check__label::before {
+	border-color: #ccc;
+}
+
+.custom_check__input:checked + .custom_check__label::before {
+	background-color: #28bd25;
+	box-shadow: inset 0 0 0 3px #fff;
+}
+
+/* checkboxes end */
+
+/* radio buttons */
+
+.custom_radio {
+	position: relative;
+}
+
+.custom_radio__input {
+	position: absolute;
+	top: 0;
+	left: 0;
+	opacity: 0;
+}
+
+.custom_radio__label::before {
+	display: inline-flex;
+	width: 10px;
+	height: 10px;
+	content: "";
+	border: 1px solid #111;
+	border-radius: 3px;
+	margin-right: 8px;
+}
+
+.custom_radio__input:disabled + .custom_radio__label::before {
+	border-color: #ccc;
+}
+
+.custom_radio__input:checked + .custom_radio__label::before {
+	background-color: #bcbd25;
+	box-shadow: inset 0 0 0 2px #fff;
+}
+
+/* radio buttons end*/
