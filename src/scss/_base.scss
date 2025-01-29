@@ -9,13 +9,14 @@ html {
 html,
 body {
 	height: 100%;
-	
+
 	font-weight: 400;
 	scroll-behavior: smooth;
 }
 
 body {
 	font-family: $font_1;
+	color: $color_text;
 }
 
 .wrapper {
@@ -34,6 +35,10 @@ body {
 	width: 100%;
 
 	padding: 10rem 0;
+
+	&.section--bg {
+		background-color: $color_bg_2;
+	}
 }
 
 .container {
@@ -44,3 +49,13 @@ body {
 	margin: 0 auto;
 }
 
+.section__title {
+	font-size: 4rem;
+	font-weight: 800;
+	line-height: 1.5;
+	color: $color_title;
+
+	&.section__title--center {
+		text-align: center;
+	}
+}
