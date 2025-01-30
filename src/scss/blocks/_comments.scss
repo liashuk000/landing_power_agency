@@ -1,5 +1,10 @@
 @use './helpers/abstracts' as *;
 
+.comments_w {
+	position: relative;
+	width: 100%;
+}
+
 .comments {
 	display: flex;
 	flex-direction: column;
@@ -15,13 +20,12 @@
 .comments__item {
 	display: block;
 	width: 100%;
-	min-width: 67rem;
 }
 
 .comments__item_text {
 	font-size: 1.6rem;
 	font-weight: 400;
-	line-height: 2.5;
+	line-height: 3.5;
 	text-align: center;
 	color: $color_text_2;
 
@@ -32,6 +36,43 @@
 
 .comments_nav {
 	display: flex;
+	column-gap: 3rem;
+}
+
+.comments_nav__item {
+	display: flex;
+	flex-direction: column;
+	row-gap: 1rem;
+	align-content: center;
+	align-items: center;
+	height: 21rem;
+}
+
+.comments_nav__data {
+	line-height: 1.5;
+	display: flex;
+	flex-direction: column;
+	row-gap: 2px;
+	text-align: center;
+
+	&.comments_nav__data--remove {
+		display: none;
+	}
+}
+
+.comments_nav__name {
+	font-size: 2.4rem;
+	font-weight: 700;
+
+	color: $color_title;
+	white-space: nowrap;
+}
+
+.comments_nav__position {
+	color: $color_text;
+	font-size: 2rem;
+	font-weight: 500;
+	white-space: nowrap;
 }
 
 .comments_nav__img_w {
@@ -44,3 +85,34 @@
 .comments_nav__img {
 	@extend %cover_img;
 }
+
+
+//decorations
+
+.comments_decoration__one--right {
+	position: absolute;
+	top: 22.4rem;
+	left: 28.02rem;
+}
+
+.comments_decoration__one--left {
+	position: absolute;
+	top: 23rem;
+	right: 26.7rem;
+	transform: rotate(180deg);
+}
+
+
+.comments_decoration__two--right {
+	position: absolute;
+	top: 7.2rem;
+	left: 20rem;
+}
+
+
+.comments_decoration__two--left {
+	position: absolute;
+	top: 60rem;
+	right: 13rem;
+}
+
