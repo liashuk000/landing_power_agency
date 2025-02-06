@@ -14,20 +14,20 @@
 		width: 11.4rem;
 		height: 10rem;
 
-		background-image: url(../imgs/comments/decor_comments.svg);
+		background-image: url(../imgs/comments/comments_decor.svg);
 		background-position: center;
 		background-repeat: no-repeat;
 		background-size: contain;
 	}
 
 	&::after {
-		bottom: 0;
+		bottom: -9rem;
 		right: 0;
 	}
 
 	&::before {
 		left: 0;
-		top: 0;
+		top: -22rem;
 	}
 }
 
