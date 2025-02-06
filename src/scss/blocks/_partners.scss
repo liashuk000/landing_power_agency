@@ -1,0 +1,55 @@
+@use './helpers/abstracts' as *;
+
+.partners__title {
+    margin-bottom: 4.7rem;
+
+	font-size: 2rem;
+	font-weight: 600;
+	line-height: 1.2;
+    letter-spacing: .2px;
+	text-align: center;
+    color: $color_title;
+}
+
+.partners__slider {
+    position: relative;
+    overflow: hidden;
+
+    &::after,
+    &::before {
+        position: absolute;
+
+        top: 0;
+
+        content: '';
+
+        width: 10rem;
+        height: 100%;
+        z-index: 2;
+    }
+
+    &::before {
+        left: 0;
+
+        background-image: linear-gradient(to right, #fff, transparent);
+    }
+
+    &::after {
+        right: 0;
+
+		background-image: linear-gradient(to left, #fff, transparent);
+    }
+}
+
+.partners__img {
+	@extend %contain_img;
+}
+
+.partners__item {
+	display: block;
+
+	width: 12.6rem;
+	height: 4.2rem;
+}
+
+

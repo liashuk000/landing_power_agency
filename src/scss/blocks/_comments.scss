@@ -1,11 +1,74 @@
 @use './helpers/abstracts' as *;
 
+.comments_w {
+	position: relative;
+	display: block;
+	width: 100%;
+
+	&::after,
+	&::before {
+		position: absolute;
+
+		content: '';
+
+		width: 11.4rem;
+		height: 10rem;
+
+		background-image: url(../imgs/comments/comments_decor.svg);
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: contain;
+	}
+
+	&::after {
+		bottom: -9rem;
+		right: 0;
+	}
+
+	&::before {
+		left: 0;
+		top: -22rem;
+	}
+}
+
 .comments {
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	row-gap: 7.9rem;
+	position: relative;
+	display: block;
+
+	max-width: 67rem;
+	width: 100%;
+	margin: 0 auto;
+
+	&::after,
+	&::before {
+		position: absolute;
+		top: -5rem;
+
+		content: '';
+
+		width: 5.6rem;
+		height: 5rem;
+
+		background-image: url(../imgs/comments/quotes.svg);
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: contain;
+	}
+
+	&::after {
+		left: -8rem;
+	}
+	&::before {
+		right: -9rem;
+		rotate: 180deg;
+	}
+}
+
+.comments_content {
+	overflow: hidden;
+	&:not(:last-child) {
+		margin-bottom: 8rem;
+	}
 }
 
 .comments_title {
@@ -14,14 +77,13 @@
 
 .comments__item {
 	display: block;
-	width: 100%;
-	min-width: 67rem;
+	max-width: 100%;
 }
 
 .comments__item_text {
 	font-size: 1.6rem;
 	font-weight: 400;
-	line-height: 2.5;
+	line-height: 3.5;
 	text-align: center;
 	color: $color_text_2;
 
@@ -34,13 +96,69 @@
 	display: flex;
 }
 
+.comments_nav__item {
+	display: flex;
+	flex-direction: column;
+	row-gap: 1rem;
+	align-content: center;
+	align-items: center;
+	text-align: center;
+	height: 21rem;
+
+	cursor: pointer;
+
+	.swiper-slide.swiper-slide-thumb-active & {
+		min-width: 18rem;
+	}
+}
+
 .comments_nav__img_w {
-	height: 8.6rem;
-	width: 8.6rem;
-	border-radius: 50%;
 	overflow: hidden;
+	border-radius: 50%;
+	transition: all $transition_dur ease-in-out;
+	flex-shrink: 0;
+
+	.swiper-slide.swiper-slide-thumb-active & {
+		height: 9.6rem;
+		width: 9.6rem;
+		border: 0.5rem solid $color_white;
+		box-shadow: 0 0 0 0.5rem $color_accent;
+	}
+
+	.swiper-slide:not(.swiper-slide-thumb-active) & {
+		height: 7.8rem;
+		width: 7.8rem;
+	}
 }
 
 .comments_nav__img {
 	@extend %cover_img;
+}
+
+.comments_nav__data {
+	line-height: 1.5;
+	display: flex;
+	flex-direction: column;
+	row-gap: 2px;
+	text-align: center;
+	.swiper-slide:not(.swiper-slide-thumb-active) & {
+		display: none;
+	}
+}
+
+.comments_nav__name {
+	font-size: 2.4rem;
+	font-weight: 700;
+	line-height: 1.5;
+	color: $color_title;
+	white-space: nowrap;
+}
+
+.comments_nav__position {
+	font-size: 2rem;
+	font-weight: 500;
+	line-height: 1.5;
+	color: $color_text;
+	opacity: 80%;
+	white-space: nowrap;
 }
